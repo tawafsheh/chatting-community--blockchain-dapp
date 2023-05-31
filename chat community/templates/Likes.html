@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Likes for Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        p {
+            margin: 0;
+            padding-bottom: 5px;
+        }
+        
+        .like {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Likes for Post</h1>
+    {% for i in range(0, len1) %}
+        <div class="like">
+            <p><strong>Username:</strong> {{ Likes[i]["username"] }}</p>
+            <p><strong>Date of Like:</strong> {{ Likes[i]["timestamp"] }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
